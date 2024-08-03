@@ -4,10 +4,15 @@ variable "ami" {
 }
 variable "instance_type" {
   type        = string
-  description = "EC2 instance type"
+  description = "EC2  worker instance type"
 }
 variable "key_name" {
   type = string
   description = "key name"
+  
+}
+variable "master_instance_type" {
+  type = string
+  description = "EC2 master instance type"
   
 }

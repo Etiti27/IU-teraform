@@ -118,7 +118,7 @@ resource "aws_security_group" "chris_group" {
 # Define the first EC2 instance
 resource "aws_instance" "my_first_instance" {
   ami             = var.ami
-  instance_type   = var.instance_type
+  instance_type   = var.master_instance_type
   subnet_id       = aws_subnet.chris_public_subnet1.id
   security_groups = [aws_security_group.chris_group.id]
   key_name = var.key_name
